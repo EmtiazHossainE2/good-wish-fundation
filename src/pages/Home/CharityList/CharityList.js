@@ -4,13 +4,13 @@ import './CharityList.css'
 const CharityList = () => {
     const [allCharity , setAllCharity] = useState([])
     useEffect(() =>{
-        fetch('CharityList.json')
+        fetch('http://localhost:5000/service')
         .then(res => res.json())
         .then(data => setAllCharity(data))
     },[])
     return (
         <div className='container'>
-            <div className='text-center my-5'>
+            <div className='text-center mt-3 mb-5'>
             <h1 className='text-warning '>Latest Causes</h1>
             <h5 className='fst-italic mt-3'>Organization set up to provide help and raise money for those in need</h5>
             <div className='hr-style mx-auto pt-1 '>
@@ -21,7 +21,7 @@ const CharityList = () => {
                 <div className="row g-5">
                     {
                         allCharity.map(charity => <SingleCharity
-                        key={charity.id}
+                        key={charity._id}
                         charity={charity}
                         ></SingleCharity>)
                     }
