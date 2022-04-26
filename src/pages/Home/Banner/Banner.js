@@ -2,9 +2,9 @@ import React from 'react';
 import './Banner.css'
 
 // banner 
-import banner1 from '../../../images/banner/banner1.jpg'
-import banner2 from '../../../images/banner/banner2.jpg'
-import banner3 from '../../../images/banner/banner3.jpg'
+import banner1 from '../../../images/banner/banner-1.jpg'
+import banner2 from '../../../images/banner/banner-2.jpg'
+import banner3 from '../../../images/banner/banner-3.jpg'
 import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
@@ -19,9 +19,11 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption >
-                        <h3>Lamborghini Diablo</h3>
-                        <p>Independent automobile repair shops  in the US may also achieve certification through manufacturer sponsored programs</p>
-                        <button className='btn btn-danger'>Explore More</button>
+                    <div className="custom-caption">
+                            <h1>Stand Up For <br /> The <span className='text-warning'>Deprived</span></h1>
+                            <p className='py-3'> The different ways to help  and those who've <br /> already stepped up for the cause.</p>
+                            <button className='btn btn-warning fw-bold'>View More</button>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -32,9 +34,11 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Ford Raptor</h3>
-                        <p>Permits motorists more flexibility in selecting where their car is serviced.</p>
-                        <button className='btn btn-danger'>Explore More</button>
+                        <div className="custom-caption">
+                            <h1>Stand Up For <br /> The <span className='text-warning'>Deprived</span></h1>
+                            <p className='py-3'> Supporting the mission, inspiring others with  <br /> the same interests to get involved</p>
+                            <button className='btn btn-outline-light fw-bold'>View More</button>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,9 +49,11 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Porsche 911 Carrera</h3>
-                        <p>A choice in service centers to select from; service department at a car dealership</p>
-                        <button className='btn btn-danger'>Explore More</button>
+                    <div className="custom-caption">
+                            <h1>Stand Up For <br /> The <span className='text-warning'>Deprived</span></h1>
+                            <p className='py-3'> the different ways to help  and those who've <br /> already stepped up for the cause.</p>
+                            <button className='btn btn-outline-warning fw-bold'>View More</button>
+                        </div>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

@@ -1,0 +1,17 @@
+.carousel-indicators {
+    display: none;
+}
+.carousel-caption {
+    text-align: left !important;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+
+/* responsive  */
+@media only screen and (max-width:692px){
+    .carousel-caption .custom-caption {
+        display: none;
+    }
+}

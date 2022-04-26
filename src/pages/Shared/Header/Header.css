@@ -1,12 +1,12 @@
 .header-container{
-    background-color: #47423d !important;
+    background-color: #2e2c28 !important;
     padding: 10px 0;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 .nav-style a {
     text-decoration: none;
     margin-right: 20px;
     padding: 2px;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff ;
 }
