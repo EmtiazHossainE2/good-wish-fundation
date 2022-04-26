@@ -11,7 +11,16 @@
 
 /* responsive  */
 @media only screen and (max-width:692px){
+    .carousel-item{
+        margin-top: 63px;
+    }
     .carousel-caption .custom-caption {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:840px){
+    .carousel-caption .custom-caption h1{
         display: none;
     }
 }

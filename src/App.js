@@ -8,7 +8,7 @@ import Donate from './pages/Donate/Donate';
 import Login from './pages/Accounts/Login/Login';
 import SignUp from './pages/Accounts/SignUp/SignUp';
 import Header from './pages/Shared/Header/Header';
-// import Footer from './pages/Shared/Footer/Footer';
+import Footer from './pages/Shared/Footer/Footer';
 import NotFound from './pages/Shared/NotFound/NotFound';
 import './App.css'
 
@@ -25,7 +25,7 @@ const App = () => {
                 <Route path='/signup' element={<SignUp/>}>  </Route>
                 <Route path='*' element={<NotFound/>}></Route>
             </Routes>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 };
