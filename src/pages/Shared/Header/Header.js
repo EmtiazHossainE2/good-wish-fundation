@@ -24,7 +24,7 @@ const Header = () => {
                         <Nav className="me-auto"></Nav>
                         <Nav className='nav-style my-1'>
                             <Nav.Link as={CustomLink} to='/donate' className='mt-2 fw-bold'>Donation</Nav.Link>
-                            {user?.email == 'emtiazemon310@gmail.com'
+                            {user?.email === 'emtiazemon310@gmail.com'
                                 && <>
                                     <Nav.Link as={CustomLink} to='/add-causes' className='mt-2 fw-bold'>Add Causes</Nav.Link>
                                     <Nav.Link as={CustomLink} to='/manage-cause' className='mt-2 fw-bold'>Manage Causes</Nav.Link>
@@ -44,8 +44,8 @@ const Header = () => {
                             {user?.uid
                                 ?
                                 <NavDropdown className='pt-2 fs-bold  ' title="Profile" id="collasible-nav-dropdown">
-                                    <Nav.Link as={CustomLink} to='/profile' className='mt-2 fw-bold bg-dark text-light'>Dashboard</Nav.Link>
-                                    <Nav.Link as={CustomLink} to='/login' className='mt-2 fw-bold bg-dark text-light' onClick={() => signOut(auth)}>Log Out</Nav.Link>
+                                    <Nav.Link as={CustomLink} to='/profile' className='fw-bold mt-2 text-light'>Dashboard</Nav.Link>
+                                    <Nav.Link as={CustomLink} to='/login' className='mt-2 fw-bold  text-light' onClick={() => signOut(auth)}>Log Out</Nav.Link>
                                 </NavDropdown>
                                 :
                                 <>

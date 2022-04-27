@@ -17,6 +17,7 @@ import './App.css'
 import ManageCause from './pages/Accounts/Admin/ManageCause/ManageCause';
 import RequireAuth from './pages/Accounts/RequireAuth/RequireAuth';
 import Donation from './pages/Donation/Donation';
+import Profile from './pages/Accounts/Profile/Profile';
 
 const App = () => {
     return (
@@ -50,6 +51,7 @@ const App = () => {
                 }></Route>
                 <Route path='/login' element={<Login />}></Route>
                 <Route path='/signup' element={<SignUp />}></Route>
+                <Route path='/profile' element={<Profile />}></Route>
                 <Route path='*' element={<NotFound />}></Route>
             </Routes>
             <Footer />
