@@ -10,13 +10,15 @@ import SignUp from './pages/Accounts/SignUp/SignUp';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
 import NotFound from './pages/Shared/NotFound/NotFound';
-import './App.css'
 import Details from './components/Details/Details';
 import AddCauses from './pages/AddCauses/AddCauses';
+import { Toaster } from 'react-hot-toast';
+import './App.css'
 
 const App = () => {
     return (
         <div className='bg-container overflow-hidden ' >
+            <Toaster></Toaster>
             <Header/>
             <Routes>
                 <Route path='/' element={<Home/>}> Home </Route>

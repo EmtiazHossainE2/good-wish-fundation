@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import './AddCauses.css'
 import { FaHandHoldingHeart } from 'react-icons/fa';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 
 
@@ -10,13 +12,31 @@ const AddCauses = () => {
     const [terms, setTerms] = useState(false)
 
     const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+        event.preventDefault()
+
+        const causeInfo = {
+            title: event.target.causeTitle.value,
+            date: event.target.causeDate.value,
+            description: event.target.causeDescription.value,
+            img: event.target.causeImg.value
         }
 
-        setValidated(true);
+        if (causeInfo.title === '' || causeInfo.date === '' || causeInfo.description === '' || causeInfo.img === '') {
+            toast.error(`Please add all info `, { id: "info" });
+        }
+        else {
+            axios.post('http://localhost:5000/service/', causeInfo)
+                .then(response => {
+                    console.log(response);
+                    toast.success(`Thank you for adding New cause `, { id: "add" });
+                    event.target.reset()
+                })
+
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
     };
     return (
         <div className='mt-5 py-5  add-container'>
@@ -32,13 +52,11 @@ const AddCauses = () => {
                             <InputGroup hasValidation>
                                 <Form.Control
                                     type="text"
+                                    name='causeTitle'
                                     placeholder="Causes Title"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                 />
-                                <Form.Control.Feedback type="invalid" className='fw-bold'>
-                                    Please choose a title.
-                                </Form.Control.Feedback>
                             </InputGroup>
                         </Form.Group>
                         <Form.Group as={Col} md="6" controlId="validationCustomUsername">
@@ -46,30 +64,23 @@ const AddCauses = () => {
                             <InputGroup hasValidation>
                                 <Form.Control
                                     type="date"
+                                    name='causeDate'
                                     placeholder="Date"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                 />
-                                <Form.Control.Feedback type="invalid" className='fw-bold' >
-                                    Please choose date
-                                </Form.Control.Feedback>
                             </InputGroup>
                         </Form.Group>
                     </Row>
                     <Row className="mb-3 mt-4 fst-italic">
                         <Form.Group as={Col} md="6" controlId="validationCustom03">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} type="text" placeholder="Enter description" required />
-                            <Form.Control.Feedback type="invalid" className='fw-bold'>
-                                Please Provide Description
-                            </Form.Control.Feedback>
+                            <Form.Control as="textarea" rows={3} type="text" name='causeDescription' placeholder="Enter description" required />
                         </Form.Group>
                         <Form.Group as={Col} md="6" controlId="validationCustom04">
                             <Form.Label>Image</Form.Label>
-                            <Form.Control type="text" placeholder="Image url" required />
-                            <Form.Control.Feedback type="invalid" className='fw-bold' >
-                                Please Provide Image
-                            </Form.Control.Feedback>
+                            <Form.Control type="text" name='causeImg' placeholder="Image url" required />
+                            
                         </Form.Group>
                     </Row>
                     <div className='d-flex '>
@@ -79,7 +90,7 @@ const AddCauses = () => {
                         </div>
                     </div>
                     <Button disabled={!terms} variant="warning" type="submit" className=' fs-5'>
-                        Submit <span className='ps-3 '><FaHandHoldingHeart/></span> 
+                        Submit <span className='ps-3 '><FaHandHoldingHeart /></span>
                     </Button>
                 </Form>
             </div>
