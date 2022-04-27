@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
+import DonateDetails from '../DonateDetails/DonateDetails';
 
 const Donate = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -16,15 +17,31 @@ const Donate = () => {
         handleDonations()
     }, [user])
 
+    console.log(donations);
+
+
+
     return (
         <div className='py-5'>
             <div className='pt-5 text-center'>
-                <h2>Your Donation List</h2>
+                <h1>Donation List</h1>
                 <div className='hr-style mx-auto  mb-3 '>
                 </div>
+                <h4>Name : {user?.displayName} </h4>
+                <h5 className='pt-3'>Email : <span className='fw-bold text-warning '>{user?.email}</span></h5>
+                
             </div>
             <div>
-            <h2 className='text-center my-5'>This is Your donation {donations.length}</h2>
+                <h2 className='text-center my-5'> Total Donation {donations?.length}</h2>
+            </div>
+            <div>
+                {
+                    donations.map((myDonation, index) => <DonateDetails
+                        key={myDonation._id}
+                        index={index}
+                        myDonation={myDonation}
+                    ></DonateDetails>)
+                }
             </div>
 
         </div>
