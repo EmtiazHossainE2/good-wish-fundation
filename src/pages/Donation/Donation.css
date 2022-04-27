@@ -7,21 +7,31 @@
     border-radius: 20px;
     width: 50%;
 }
+.custom-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
 
 /* donation-form */
 @media only screen and (max-width:592px) {
     .donation-form{
-        background-color: #fff;
         padding: 5% 0;
-        border-radius: 20px;
         width: 100%;
     }
+    .custom-style{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:768px) {
+    
 }
 @media only screen and (max-width:992px) {
     .donation-form{
-        background-color: #fff;
         padding: 5% 0;
-        border-radius: 20px;
         width: 75%;
     }
 }

@@ -17,7 +17,7 @@ const Donation = () => {
 
     const handleDonate = event => {
         event.preventDefault()
-        const donate = {
+        const donation = {
             name: user.displayName,
             email: user.email,
             charity: singleDetail.title,
@@ -27,22 +27,22 @@ const Donation = () => {
             address: event.target.address.value,
             phone: event.target.number.value
         }
-        if (donate.email === '' || donate.charity === '' || donate.money === '' || donate.date === '' || donate.address === '' ) {
-            toast.error(`Please add all info `, { id: "info" });
+        if (donation.email === '' || donation.charity === '' || donation.money === '' || donation.date === '' || donation.address === '') {
+            toast.error(`Please Add All Info `, { id: "info" });
         }
         else {
-            axios.post('', donate)
-            .then(response => {
-                const { data } = response
-                if (data.insertedId) {
-                    toast.success(`Thank you for Donation `, { id: "donation" });
-                    event.target.reset()
-                }
-                console.log(response);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+            axios.post('http://localhost:5000/donation', donation)
+                .then(response => {
+                    const { data } = response
+                    if (data.insertedId) {
+                        toast.success(`Thank you for Donation `, { id: "donation" });
+                        event.target.reset()
+                    }
+                    console.log(response);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
 
     }
@@ -55,20 +55,18 @@ const Donation = () => {
                 </div>
             </div>
             <div className='my-5 text-center m-auto donation-form'>
-                <Form noValidate  onSubmit={handleDonate}>
+                <Form noValidate onSubmit={handleDonate}>
                     <input className='w-75 mb-3 py-2' type="text" value={user?.displayName} name='name' placeholder='Name' required disabled /> <br />
                     <input className='w-75 mb-3 py-2' type="email" value={user?.email} name='email' placeholder='Email' required disabled /> <br />
                     <input className='w-75 mb-3 py-2' type="text" value={singleDetail?.title} name='charity' placeholder='Charity' required /> <br />
-                    <div className="row w-100 text-center mx-auto ">
-                        <div className="col-md-6 ps-5">
-                            <input className=' mb-3 py-2' type="number" name='money' placeholder='Enter Money ' required />
-                        </div>
-                        <div className="col-md-6 ps-4">
-                            <input className=' mb-3 py-2' type="date" name='date' placeholder='Date ' required />
-                        </div>
-                    </div>
                     <input className='w-75 mb-3 py-2' type="text" name='address' placeholder='Address' required /> <br />
                     <input className='w-75 mb-3 py-2' type="number" name='number' placeholder='Contact Number' required /> <br />
+
+                    <div className=" w-75 mx-auto custom-style">
+                        <input className=' mb-3 py-2 ' type="number" name='money' placeholder='Enter Money ' required />
+                        <input className=' mb-3 py-2' type="date" name='date' placeholder='Date ' required />
+                    </div>
+
                     <div className='d-flex w-75 mx-auto'>
                         <div className='fw-bold text-primary mb-3'>
                             <input onClick={() => setTerms(!terms)} type="checkbox" name="terms" id="terms" />
