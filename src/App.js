@@ -12,6 +12,7 @@ import Footer from './pages/Shared/Footer/Footer';
 import NotFound from './pages/Shared/NotFound/NotFound';
 import './App.css'
 import Details from './components/Details/Details';
+import AddCauses from './pages/AddCauses/AddCauses';
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
                 <Route path='/blog' element={<Blog/>}>  </Route>
                 <Route path='/events' element={<Events/>}>  </Route>
                 <Route path='/donate' element={<Donate/>}>  </Route>
+                <Route path='/addcauses' element={<AddCauses/>}>  </Route>
                 <Route path='/login' element={<Login/>}>  </Route>
                 <Route path='/signup' element={<SignUp/>}>  </Route>
                 <Route path='*' element={<NotFound/>}></Route>

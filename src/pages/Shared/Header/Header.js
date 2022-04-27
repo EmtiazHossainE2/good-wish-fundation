@@ -19,6 +19,7 @@ const Header = () => {
                         <Nav className="me-auto"></Nav>
                         <Nav className='nav-style my-1'>
                             <Nav.Link as={CustomLink} to='/donate' className='mt-2 fw-bold'>Donation</Nav.Link>
+                            <Nav.Link as={CustomLink} to='/addcauses' className='mt-2 fw-bold'>Add Causes</Nav.Link>
                             <Nav.Link as={CustomLink} to='/events' className='mt-2 fw-bold'>Events</Nav.Link>
                             <Nav.Link as={CustomLink} to='/blog' className='mt-2 fw-bold'>Blog</Nav.Link>
                             <Nav.Link as={CustomLink} to='/login' className='mt-2 fw-bold'>Login</Nav.Link>
