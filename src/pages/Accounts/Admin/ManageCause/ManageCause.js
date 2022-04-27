@@ -26,6 +26,25 @@ const ManageCause = () => {
             <h2 className='text-center '>Manage All Causes</h2>
             <div className='hr-style mx-auto  mb-3 '>
             </div>
+            <div className='container py-3  text-light' style={{backgroundColor : '#ff9f43'}}>
+                <div className="row ">
+                    <div className="col-md-2  d-flex justify-content-center pb-1  align-items-center">
+                        <span className='pe-5'>List</span>
+                    </div>
+                    <div className="col-md-1 d-flex justify-content-center pb-1  align-items-center">
+                        <h5> Image</h5>
+                    </div>
+                    <div className="col-md-5 d-flex justify-content-center pb-1  align-items-center">
+                        <h5>Title</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-1  align-items-center">
+                        <h5>Delete</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-1  align-items-center">
+                        <h5>Update</h5>
+                    </div>
+                </div>
+            </div>
             <div>
                 {
                     allCharity.map((charity, index) => <ManageItem

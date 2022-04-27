@@ -29,10 +29,35 @@ const Donate = () => {
                 </div>
                 <h4>Name : {user?.displayName} </h4>
                 <h5 className='pt-3'>Email : <span className='fw-bold text-warning '>{user?.email}</span></h5>
-                
+
             </div>
             <div>
                 <h2 className='text-center my-5'> Total Donation {donations?.length}</h2>
+            </div>
+            <div className="container pb-3">
+                <div className="row  bg-dark text-light p-3">
+                    <div className="col-md-1  d-flex justify-content-center pb-2  align-items-center">
+                        <h5 className='pe-5'>List</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-2  align-items-center">
+                        <h5> Charity</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-2  align-items-center">
+                        <h5>Contact Number</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-2  align-items-center">
+                        <h5>Date</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-2  align-items-center">
+                        <h5>Your Address</h5>
+                    </div>
+                    <div className="col-md-2 d-flex justify-content-center pb-2  align-items-center">
+                        <h5>Money</h5>
+                    </div>
+                    <div className="col-md-1 d-flex justify-content-center pb-2  align-items-center">
+                        <h5>Update</h5>
+                    </div>
+                </div>
             </div>
             <div>
                 {
