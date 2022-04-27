@@ -16,6 +16,7 @@ import { Toaster } from 'react-hot-toast';
 import './App.css'
 import ManageCause from './pages/Accounts/Admin/ManageCause/ManageCause';
 import RequireAuth from './pages/Accounts/RequireAuth/RequireAuth';
+import Donation from './pages/Donation/Donation';
 
 const App = () => {
     return (
@@ -27,6 +28,11 @@ const App = () => {
                 <Route path='/details/:detailsId' element={<Details />}></Route>
                 <Route path='/blog' element={<Blog />}></Route>
                 <Route path='/events' element={<Events />}></Route>
+                <Route path='/donate/:detailsId' element={
+                    <RequireAuth>
+                        <Donation/>
+                    </RequireAuth>
+                }></Route>
                 <Route path='/donate' element={
                     <RequireAuth>
                         <Donate />
