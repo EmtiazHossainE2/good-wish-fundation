@@ -32,7 +32,7 @@ const Donation = () => {
             toast.error(`Please Add All Info `, { id: "info" });
         }
         else {
-            axios.post('http://localhost:5000/donation', donation)
+            axios.post('https://good-wish-server.herokuapp.com/donation', donation)
                 .then(response => {
                     const { data } = response
                     if (data.insertedId) {

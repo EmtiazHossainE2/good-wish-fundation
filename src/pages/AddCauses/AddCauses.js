@@ -24,7 +24,7 @@ const AddCauses = () => {
             toast.error(`Please add all info `, { id: "info" });
         }
         else {
-            axios.post('http://localhost:5000/service/', causeInfo)
+            axios.post('https://good-wish-server.herokuapp.com/service/', causeInfo)
                 .then(response => {
                     console.log(response);
                     toast.success(`Thank you for adding New cause `, { id: "add" });
@@ -44,7 +44,7 @@ const AddCauses = () => {
                 <hr />
             </div>
             <div className="container w-75 mx-auto py-5 add-form">
-                <Form noValidate  onSubmit={handleSubmit}>
+                <Form noValidate onSubmit={handleSubmit}>
                     <Row className="mb-3 fst-italic fw-bold">
                         <Form.Group as={Col} md="6" controlId="validationCustomUsername">
                             <Form.Label>Cause Title</Form.Label>
@@ -79,7 +79,7 @@ const AddCauses = () => {
                         <Form.Group as={Col} md="6" controlId="validationCustom04">
                             <Form.Label>Image</Form.Label>
                             <Form.Control type="text" name='causeImg' placeholder="Image url" required />
-                            
+
                         </Form.Group>
                     </Row>
                     <div className='d-flex '>

@@ -10,7 +10,7 @@ const Donate = () => {
     useEffect(() => {
         const handleDonations = async () => {
             const email = user.email
-            const url = `http://localhost:5000/donation?email=${email}`
+            const url = `https://good-wish-server.herokuapp.com/donation?email=${email}`
             const { data } = await axios.get(url)
             setDonations(data)
         }

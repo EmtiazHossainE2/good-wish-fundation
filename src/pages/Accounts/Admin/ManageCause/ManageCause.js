@@ -8,7 +8,7 @@ const ManageCause = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this ?')
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`
+            const url = `https://good-wish-server.herokuapp.com/service/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -26,7 +26,7 @@ const ManageCause = () => {
             <h2 className='text-center '>Manage All Causes</h2>
             <div className='hr-style mx-auto  mb-3 '>
             </div>
-            <div className='container py-3  text-light' style={{backgroundColor : '#ff9f43'}}>
+            <div className='container py-3  text-light' style={{ backgroundColor: '#ff9f43' }}>
                 <div className="row ">
                     <div className="col-md-2  d-flex justify-content-center pb-1  align-items-center">
                         <span className='pe-5'>List</span>

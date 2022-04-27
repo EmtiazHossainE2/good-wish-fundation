@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const useSingleDetail = (detailsId) => {
     const [singleDetail, setSingleDetail] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${detailsId}`)
+        fetch(`https://good-wish-server.herokuapp.com/service/${detailsId}`)
             .then(res => res.json())
             .then(data => {
                 setSingleDetail(data)
@@ -11,4 +11,4 @@ const useSingleDetail = (detailsId) => {
     }, [detailsId])
     return [singleDetail, setSingleDetail]
 }
-export default useSingleDetail ;
+export default useSingleDetail;
