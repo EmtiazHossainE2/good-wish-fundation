@@ -2,61 +2,73 @@
     {
         "img" : "https://i.ibb.co/s159QKc/clean-Water.png " , 
         "title" : "Clean water for children " , 
+        "color" : "#e67e22",
         "description" : "Without access to clean water, children are at risk of life-threatening diseases. The Rapid Quality Water Testing project will mean more children have access to safe drinking water. " 
     },
     {
         "img" : "https://i.ibb.co/yfvtxxW/food-Charity.png " , 
         "title" : "Food Charity " , 
+        "color" : "#f39c12",
         "description" : " FareShare is the UK's largest charity fighting hunger and food waste. We save good food from going to waste and redistribute it to frontline charities" 
     },
     {
         "img" : "https://i.ibb.co/tM7RXvy/refuse-Shelter.png " , 
         "title" : "Refuse Shelter " , 
+        "color" : "#A3CB38",
         "description" : " You can appeal any decision that denies or ends your staying in a Partnership funded shelter. Some times if you break a shelter rule, you will be given a warning letter but will not be asked to leave." 
     },
     {
         "img" : "https://i.ibb.co/0tsZBjz/child-Support.png " , 
         "title" : "Child Support " , 
+        "color" : "#e67e22",
         "description" : "The Child Support Program provides custodial parents with assistance in obtaining financial support and medical insurance coverage for their children . " 
     },
     {
         "img" : "https://i.ibb.co/pyyPQ4j/babySit.png " , 
         "title" : "Babysit  PTA " , 
+        "color" : "#A3CB38",
         "description" : "Babysitting services must be provided by two unrelated persons 18 or over for parents engaged in PTA-sponsored volunteer activities or parents who are attending a PTA meeting. " 
     },
     {
         "img" : "https://i.ibb.co/47Dkv6N/animal-Shelter.png " , 
         "title" : "Animal Shelter " , 
+        "color" : "#e67e22",
         "description" : " An animal shelter or pound is a place where stray, lost, abandoned or surrendered animals – mostly dogs and cats – are housed. " 
     },
     {
         "img" : "https://i.ibb.co/wLPn9vJ/bird-House.png " , 
         "title" : " Bird house" , 
+        "color" : "#A3CB38",
         "description" : "You may be interested in having a bird house just for decoration, or you may be trying ... Here are some types of bird houses that specific species nest in. " 
     },
     {
         "img" : "https://i.ibb.co/6g4NdBR/cloth-Swap.png " , 
         "title" : "Cloth Swap " , 
+        "color" : "#e67e22",
         "description" : "A clothing swap is a type of swapmeet wherein participants exchange their valued but no longer used clothing for clothing they will use.  " 
     },
     {
         "img" : "https://i.ibb.co/9gfbMKZ/drive-Safety.png " , 
         "title" : "Drive Safety " , 
+        "color" : "#ED4C67",
         "description" : "Put on your seat belt and make sure all your passengers buckle up, too. Don't drive like you own the road; drive like you own the car. Share the road with  " 
     },
     {
         "img" : "https://i.ibb.co/2NPWb5b/good-Education.png " , 
         "title" : "Good Education " , 
+        "color" : "#1abc9c",
         "description" : "Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, habits, and personal development. " 
     },
     {
         "img" : "https://i.ibb.co/k5Fzs0p/music-Lessons.png " , 
         "title" : "Music Lesson " , 
+        "color" : "#f39c12",
         "description" : "Music lessons are a type of formal instruction in playing a musical instrument or singing.   " 
     },
     {
         "img" : "https://i.ibb.co/X4HhFx3/study-Group.png " , 
         "title" : "Study Group " , 
+        "color" : "#ED4C67",
         "description" : "Listen to the conversation about creating a study group to practice and improve ... divide the learning content into small parts for each member to learn. " 
     }
 ]
