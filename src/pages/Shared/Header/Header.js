@@ -25,9 +25,15 @@ const Header = () => {
                         <Nav className='nav-style my-1'>
                             <Nav.Link as={CustomLink} to='/donate' className='mt-2 fw-bold'>Donation</Nav.Link>
                             {user?.email === 'emtiazemon310@gmail.com'
-                                && <>
-                                    <Nav.Link as={CustomLink} to='/add-causes' className='mt-2 fw-bold'>Add Causes</Nav.Link>
+                                &&
+                                <>
                                     <Nav.Link as={CustomLink} to='/manage-cause' className='mt-2 fw-bold'>Manage Causes</Nav.Link>
+                                </>
+                            }
+                            {user?.email
+                                &&
+                                <>
+                                    <Nav.Link as={CustomLink} to='/add-causes' className='mt-2 fw-bold'>Add Causes</Nav.Link>
 
                                 </>
                             }
