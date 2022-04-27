@@ -25,7 +25,6 @@ const ManageCause = () => {
         <div className='mt-5 py-5 '>
             <h2 className='text-center '>Manage All Causes</h2>
             <div className='hr-style mx-auto  mb-3 '>
-                
             </div>
             <div>
                 {

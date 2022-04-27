@@ -1,0 +1,27 @@
+.donation-container{
+    background-color: rgb(237, 237, 237);
+}
+.donation-form{
+    background-color: #fff;
+    padding: 2% 0;
+    border-radius: 20px;
+    width: 50%;
+}
+
+/* donation-form */
+@media only screen and (max-width:592px) {
+    .donation-form{
+        background-color: #fff;
+        padding: 5% 0;
+        border-radius: 20px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:992px) {
+    .donation-form{
+        background-color: #fff;
+        padding: 5% 0;
+        border-radius: 20px;
+        width: 75%;
+    }
+}
