@@ -15,25 +15,38 @@ import AddCauses from './pages/AddCauses/AddCauses';
 import { Toaster } from 'react-hot-toast';
 import './App.css'
 import ManageCause from './pages/Accounts/Admin/ManageCause/ManageCause';
+import RequireAuth from './pages/Accounts/RequireAuth/RequireAuth';
 
 const App = () => {
     return (
         <div className='bg-container overflow-hidden ' >
             <Toaster></Toaster>
-            <Header/>
+            <Header />
             <Routes>
-                <Route path='/' element={<Home/>}> Home </Route>
-                <Route path='/details/:detailsId' element={<Details/>}>Details</Route>
-                <Route path='/blog' element={<Blog/>}>  </Route>
-                <Route path='/events' element={<Events/>}>  </Route>
-                <Route path='/donate' element={<Donate/>}>  </Route>
-                <Route path='/add-causes' element={<AddCauses/>}>  </Route>
-                <Route path='/manage-cause' element={<ManageCause/>}>  </Route>
-                <Route path='/login' element={<Login/>}>  </Route>
-                <Route path='/signup' element={<SignUp/>}>  </Route>
-                <Route path='*' element={<NotFound/>}></Route>
+                <Route path='/' element={<Home />}></Route>
+                <Route path='/details/:detailsId' element={<Details />}></Route>
+                <Route path='/blog' element={<Blog />}></Route>
+                <Route path='/events' element={<Events />}></Route>
+                <Route path='/donate' element={
+                    <RequireAuth>
+                        <Donate />
+                    </RequireAuth>
+                }></Route>
+                <Route path='/add-causes' element={
+                    <RequireAuth>
+                        <AddCauses />
+                    </RequireAuth>
+                }></Route>
+                <Route path='/manage-cause' element={
+                    <RequireAuth>
+                        <ManageCause />
+                    </RequireAuth>
+                }></Route>
+                <Route path='/login' element={<Login />}></Route>
+                <Route path='/signup' element={<SignUp />}></Route>
+                <Route path='*' element={<NotFound />}></Route>
             </Routes>
-            <Footer/>
+            <Footer />
         </div>
     );
 };

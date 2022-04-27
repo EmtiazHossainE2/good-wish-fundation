@@ -10,6 +10,7 @@ import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth)
+    console.log(user);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" fixed='top' className='header-container' variant="dark">
@@ -22,7 +23,7 @@ const Header = () => {
                         <Nav className="me-auto"></Nav>
                         <Nav className='nav-style my-1'>
                             <Nav.Link as={CustomLink} to='/donate' className='mt-2 fw-bold'>Donation</Nav.Link>
-                            {user?.email
+                            {user?.email == "emtiazemon310@gmail.com"
                                 && <>
                                     <Nav.Link as={CustomLink} to='/add-causes' className='mt-2 fw-bold'>Add Causes</Nav.Link>
                                     <Nav.Link as={CustomLink} to='/manage-cause' className='mt-2 fw-bold'>Manage Causes</Nav.Link>
@@ -51,22 +52,6 @@ const Header = () => {
                                     <Nav.Link as={CustomLink} to='/signup' className='mt-2 fw-bold'>Register</Nav.Link>
                                 </>
                             }
-
-                            {/* <NavDropdown className='p-0 text-light' title="Account" id="collasible-nav-dropdown">
-                                {user?.email
-                                    ?
-                                    <Nav.Link as={CustomLink} to='/profile' className='mt-2 fw-bold'>Your Profile</Nav.Link>
-                                    :
-                                    <Nav.Link as={CustomLink} to='/signup' className='mt-2 fw-bold'>Register</Nav.Link>
-                                }
-                                {user?.email
-                                    ?
-                                    <Nav.Link as={CustomLink} to='/login' className='mt-2 fw-bold' onClick={() => signOut(auth)}>Log Out</Nav.Link>
-                                    :
-                                    <Nav.Link as={CustomLink} to='/login' className='mt-2 fw-bold'>Login</Nav.Link>
-                                }
-                            </NavDropdown> */}
-
 
                         </Nav>
                     </Navbar.Collapse>
