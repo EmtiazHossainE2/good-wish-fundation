@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 import './ManageItem.css'
 
 const ManageItem = ({ charity, index, handleDelete }) => {

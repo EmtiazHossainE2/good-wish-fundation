@@ -10,7 +10,7 @@ const SingleCharity = ({ charity }) => {
                     <div className=''>
                         <img className='w-100' src={img} alt="" />
                     </div>
-                    <button style={{backgroundColor : color , border: '0'}} className={`w-100 py-3 text-light ${color ? 'color' : 'btn btn-warning'}`}><span className='fw-bold fst-italic'>{title}</span></button>
+                    <button style={{backgroundColor : color , border: '0'}} className={`w-100 py-3 text-light ${color ? color : 'btn btn-warning'}`}><span className='fw-bold fst-italic'>{title}</span></button>
                 </Link>
             </div>
         </div>

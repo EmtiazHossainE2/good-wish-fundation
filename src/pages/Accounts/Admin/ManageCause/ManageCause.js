@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 import useCharityList from '../../../../hooks/useCharityList';
 import ManageItem from '../ManageItem/ManageItem';
 
