@@ -14,6 +14,7 @@ import Details from './components/Details/Details';
 import AddCauses from './pages/AddCauses/AddCauses';
 import { Toaster } from 'react-hot-toast';
 import './App.css'
+import ManageCause from './pages/Accounts/Admin/ManageCause/ManageCause';
 
 const App = () => {
     return (
@@ -26,7 +27,8 @@ const App = () => {
                 <Route path='/blog' element={<Blog/>}>  </Route>
                 <Route path='/events' element={<Events/>}>  </Route>
                 <Route path='/donate' element={<Donate/>}>  </Route>
-                <Route path='/addcauses' element={<AddCauses/>}>  </Route>
+                <Route path='/add-causes' element={<AddCauses/>}>  </Route>
+                <Route path='/manage-cause' element={<ManageCause/>}>  </Route>
                 <Route path='/login' element={<Login/>}>  </Route>
                 <Route path='/signup' element={<SignUp/>}>  </Route>
                 <Route path='*' element={<NotFound/>}></Route>

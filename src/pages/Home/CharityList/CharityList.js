@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React  from 'react';
+import useCharityList from '../../../hooks/useCharityList';
 import SingleCharity from '../SingleCharity/SingleCharity';
 import './CharityList.css'
 const CharityList = () => {
-    const [allCharity , setAllCharity] = useState([])
-    useEffect(() =>{
-        fetch('http://localhost:5000/service')
-        .then(res => res.json())
-        .then(data => setAllCharity(data))
-    },[])
+    const [allCharity ] = useCharityList()
+    
     return (
         <div className='container mb-5'>
             <div className='text-center mt-3 mb-5'>

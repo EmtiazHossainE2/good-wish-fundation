@@ -8,7 +8,6 @@ import toast from 'react-hot-toast';
 
 
 const AddCauses = () => {
-    const [validated, setValidated] = useState(false);
     const [terms, setTerms] = useState(false)
 
     const handleSubmit = (event) => {
@@ -45,7 +44,7 @@ const AddCauses = () => {
                 <hr />
             </div>
             <div className="container w-75 mx-auto py-5 add-form">
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <Form noValidate  onSubmit={handleSubmit}>
                     <Row className="mb-3 fst-italic fw-bold">
                         <Form.Group as={Col} md="6" controlId="validationCustomUsername">
                             <Form.Label>Cause Title</Form.Label>
