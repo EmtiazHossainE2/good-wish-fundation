@@ -7,7 +7,7 @@
     border-radius: 20px;
     width: 50%;
 }
-.custom-style{
+.donation-style{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@
         padding: 5% 0;
         width: 100%;
     }
-    .custom-style{
+    .donation-style{
         display: flex;
         flex-direction: column;
     }

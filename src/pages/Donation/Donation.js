@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import useSingleDetail from '../../hooks/useSingleDetail';
 import { FaHandHoldingHeart } from 'react-icons/fa';
 import './Donation.css'
 
 const Donation = () => {
+    const navigate = useNavigate()
     const { detailsId } = useParams()
     const [singleDetail] = useSingleDetail(detailsId)
     const [user, loading, error] = useAuthState(auth);
@@ -37,6 +38,7 @@ const Donation = () => {
                     if (data.insertedId) {
                         toast.success(`Thank you for Donation `, { id: "donation" });
                         event.target.reset()
+                        navigate('/donate')
                     }
                     console.log(response);
                 })
@@ -62,7 +64,7 @@ const Donation = () => {
                     <input className='w-75 mb-3 py-2' type="text" name='address' placeholder='Address' required /> <br />
                     <input className='w-75 mb-3 py-2' type="number" name='number' placeholder='Contact Number' required /> <br />
 
-                    <div className=" w-75 mx-auto custom-style">
+                    <div className=" w-75 mx-auto donation-style">
                         <input className=' mb-3 py-2 ' type="number" name='money' placeholder='Enter Money ' required />
                         <input className=' mb-3 py-2' type="date" name='date' placeholder='Date ' required />
                     </div>
