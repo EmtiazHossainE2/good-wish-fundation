@@ -4,7 +4,7 @@ import google from '../../../images/social/Google.png'
 import facebook from '../../../images/social/facebook.png'
 import apple from '../../../images/social/Apple.png'
 import yahoo from '../../../images/social/Yahoo.png';
-import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithFacebook,  useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../../components/Loading/Loading';
@@ -17,33 +17,32 @@ const SocialAccount = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     //facebook
     const [signInWithFacebook, facebookUser, facebookLoading, facebookError] = useSignInWithFacebook(auth);
-    //github 
-    const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
+    
 
     let location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
 
     //success
-    if (googleUser || facebookUser || githubUser) {
+    if (googleUser || facebookUser ) {
         toast.success(`Welcome to Good Wish Foundation `, { id: "welcome" });
         navigate(from)
     }
 
     // loading 
-    if (googleLoading || facebookLoading || githubLoading) {
+    if (googleLoading || facebookLoading ) {
         return <Loading />
     }
 
     //error 
     let errorMessage;
-    if (googleError || facebookError || githubError) {
+    if (googleError || facebookError ) {
         toast.error(`Something is wrong`, { id: "error" });
         errorMessage = <p className='text-danger'>Something is wrong.Try again please
         </p>
     }
 
-    //
+    // update soon
     const handleApple = () => {
         toast.error(`Apple Singin not available right now`, { id: "error" });
     }
