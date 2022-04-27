@@ -35,11 +35,11 @@ const FooterTop = () => {
                         <div className="col-md-4 col-sm-6 d-flex justify-content-center">
                             <div className='important-link'>
                                 <h2 className='text-warning'>Links</h2>
-                                <Link to='/about'> <span className='text-warning pe-2'><FaArrowAltCircleRight /></span> About Us</Link>
-                                <Link to='/blog'> <span className='text-warning pe-2'><FaArrowAltCircleRight /></span>Read Blog</Link>
-                                <Link to='/'> <span className='text-warning pe-2'><FaArrowAltCircleRight /></span>Partner </Link>
-                                <Link to='/'> <span className='text-warning pe-2'><FaArrowAltCircleRight /></span> Recent Causes</Link>
-                                <Link to='/'> <span className='text-warning pe-2'><FaArrowAltCircleRight /></span> Who we are ?</Link>
+                                <Link to='/about'>  About Us</Link>
+                                <Link to='/blog'> Read Blog</Link>
+                                <Link to='/'> Partner </Link>
+                                <Link to='/'>  Recent Causes</Link>
+                                <Link to='/'>  Who we are ?</Link>
                             </div>
                         </div>
                         <div className="col-md-4 col-sm-6 d-flex justify-content-center">
