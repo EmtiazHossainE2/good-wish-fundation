@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SingleCharity = ({ charity }) => {
-    const { title, img } = charity
+    const { title, img , _id } = charity
     return (
         <div className='col-md-3'>
             <div className="cart text-center rounded-1  bg-warning">
-                <Link to='/detail'>
+                <Link to={'/details/' + _id}>
                     <div className=''>
                         <img className='w-100' src={img} alt="" />
                     </div>

@@ -9,7 +9,7 @@ const CharityList = () => {
         .then(data => setAllCharity(data))
     },[])
     return (
-        <div className='container'>
+        <div className='container '>
             <div className='text-center mt-3 mb-5'>
             <h1 className='text-warning '>Latest Causes</h1>
             <h5 className='fst-italic mt-3'>Organization set up to provide help and raise money for those in need</h5>

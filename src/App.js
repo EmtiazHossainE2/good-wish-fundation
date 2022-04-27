@@ -11,13 +11,15 @@ import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
 import NotFound from './pages/Shared/NotFound/NotFound';
 import './App.css'
+import Details from './components/Details/Details';
 
 const App = () => {
     return (
-        <div className='bg-container'>
+        <div className='bg-container overflow-hidden ' >
             <Header/>
             <Routes>
                 <Route path='/' element={<Home/>}> Home </Route>
+                <Route path='/details/:detailsId' element={<Details/>}>Details</Route>
                 <Route path='/blog' element={<Blog/>}>  </Route>
                 <Route path='/events' element={<Events/>}>  </Route>
                 <Route path='/donate' element={<Donate/>}>  </Route>
