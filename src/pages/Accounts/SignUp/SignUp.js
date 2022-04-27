@@ -89,7 +89,7 @@ const Signup = () => {
             //create user 
             createUserWithEmailAndPassword(email.value, password.value)
                 .then(() => {
-                    toast.success("Welcome Education Hub", { id: "success" });
+                    toast.success("Welcome to Good Wish Foundation", { id: "success" });
                     navigate(from)
                 })
         }

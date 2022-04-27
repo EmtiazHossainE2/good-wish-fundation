@@ -26,7 +26,7 @@ const SocialAccount = () => {
 
     //success
     if (googleUser || facebookUser || githubUser) {
-        toast.success(`Welcome to Education Hub `, { id: "welcome" });
+        toast.success(`Welcome to Good Wish Foundation `, { id: "welcome" });
         navigate(from)
     }
 
