@@ -1,37 +1,42 @@
 import React from 'react';
+import { Table } from 'react-bootstrap';
 import useCharityList from '../../../../hooks/useCharityList';
 import ManageItem from '../ManageItem/ManageItem';
 
 const ManageCause = () => {
-    const [allCharity , setAllCharity] = useCharityList()
+    const [allCharity, setAllCharity] = useCharityList()
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this ?')
-        if(proceed){
+        if (proceed) {
             const url = `http://localhost:5000/service/${id}`
-            fetch(url , {
+            fetch(url, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const exists = allCharity.filter(charity => charity._id !== id)
-                setAllCharity(exists)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const exists = allCharity.filter(charity => charity._id !== id)
+                    setAllCharity(exists)
+                })
 
         }
     }
     return (
         <div className='mt-5 py-5 '>
-            <h2 className='text-center pb-3'>Manage All Causes</h2>
+            <h2 className='text-center '>Manage All Causes</h2>
+            <div className='hr-style mx-auto  mb-3 '>
+                
+            </div>
             <div>
-            {
-                allCharity.map(charity => <ManageItem
-                key={charity._id}
-                charity={charity}
-                handleDelete={handleDelete}
-                ></ManageItem>)
-            }
+                {
+                    allCharity.map((charity, index) => <ManageItem
+                        key={charity._id}
+                        index={index}
+                        charity={charity}
+                        handleDelete={handleDelete}
+                    ></ManageItem>)
+                }
             </div>
             {/* <div className='text-center'>
                 {
