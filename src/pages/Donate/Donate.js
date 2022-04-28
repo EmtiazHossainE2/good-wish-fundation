@@ -17,8 +17,6 @@ const Donate = () => {
         handleDonations()
     }, [user])
 
-    console.log(donations);
-
 
 
     return (

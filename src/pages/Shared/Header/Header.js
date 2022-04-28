@@ -15,7 +15,6 @@ const Header = () => {
         adminEmail:process.env.REACT_APP_admin_email,
         password:process.env.REACT_APP_admin_pass
     }
-    console.log(admin);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" fixed='top' className='header-container' variant="dark">
