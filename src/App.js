@@ -13,11 +13,12 @@ import NotFound from './pages/Shared/NotFound/NotFound';
 import Details from './components/Details/Details';
 import AddCauses from './pages/AddCauses/AddCauses';
 import { Toaster } from 'react-hot-toast';
-import './App.css'
 import ManageCause from './pages/Accounts/Admin/ManageCause/ManageCause';
 import RequireAuth from './pages/Accounts/RequireAuth/RequireAuth';
 import Donation from './pages/Donation/Donation';
 import Profile from './pages/Accounts/Profile/Profile';
+import './App.css'
+import UpdateCause from './pages/Accounts/Admin/UpdateCause/UpdateCause';
 
 const App = () => {
     return (
@@ -47,6 +48,11 @@ const App = () => {
                 <Route path='/manage-cause' element={
                     <RequireAuth>
                         <ManageCause />
+                    </RequireAuth>
+                }></Route>
+                <Route path='/manage-cause/:detailsId' element={
+                    <RequireAuth>
+                        <UpdateCause />
                     </RequireAuth>
                 }></Route>
                 <Route path='/login' element={<Login />}></Route>

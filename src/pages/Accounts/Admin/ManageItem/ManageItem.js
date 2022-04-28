@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ManageItem.css'
 
 const ManageItem = ({ charity, index, handleDelete }) => {
-    const { title, img } = charity
+    const { title, img, _id } = charity
     return (
         <div className='container'>
             <div className="row border">
@@ -19,7 +20,9 @@ const ManageItem = ({ charity, index, handleDelete }) => {
                     <button onClick={() => handleDelete(charity._id)} className='btn btn-danger'>Delete</button>
                 </div>
                 <div className="col-md-2 d-flex justify-content-center pb-1  align-items-center">
-                    <button className='btn btn-success'>Update</button>
+                    <Link to={'/manage-cause/' + _id}>
+                        <button className='btn btn-success'>Update</button>
+                    </Link>
                 </div>
             </div>
             {/* <Table responsive="lg">

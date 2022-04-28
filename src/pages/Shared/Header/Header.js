@@ -11,7 +11,11 @@ import './Header.css'
 const Header = () => {
     const [user] = useAuthState(auth)
     // console.log(user); 
-    console.log(process.env.REACT_APP_admin_email);
+    const admin = {
+        adminEmail:process.env.REACT_APP_admin_email,
+        password:process.env.REACT_APP_admin_pass
+    }
+    console.log(admin);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" fixed='top' className='header-container' variant="dark">
@@ -24,7 +28,7 @@ const Header = () => {
                         <Nav className="me-auto"></Nav>
                         <Nav className='nav-style my-1'>
                             <Nav.Link as={CustomLink} to='/donate' className='mt-2 fw-bold'>Donation</Nav.Link>
-                            {user?.email === 'emtiazemon310@gmail.com'
+                            {user?.email === admin.adminEmail
                                 &&
                                 <>
                                     <Nav.Link as={CustomLink} to='/manage-cause' className='mt-2 fw-bold'>Manage Causes</Nav.Link>
