@@ -23,7 +23,7 @@ const UpdateCause = () => {
             toast.error(`Please update All `, { id: "update" });
         }
         else {
-            const url = `http://localhost:5000/service/${detailsId}`
+            const url = `https://good-wish-server.herokuapp.com/service/${detailsId}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
